@@ -7,6 +7,14 @@
   "workspaces": [
     "packages/*"
   ],
+  "nohoist": [
+    "**/hardhat",
+    "**/hardhat/**",
+    "**/@typescript/native-preview",
+    "**/@typescript/native-preview/**",
+    "**/viem",
+    "**/viem/**"
+  ],
   "scripts": {
     "build-contracts": "yarn workspace @eil-protocol/contracts build",
     "build-sdk": "yarn workspace @eil-protocol/sdk build",
