@@ -7,7 +7,7 @@ import {
   toAddress
 } from '../types/index.js'
 import { Call, encodeFunctionData } from 'viem'
-import assert from 'assert'
+import { assert } from './SdkUtils.js'
 
 export function asCall (chainId: bigint, call: Call | FunctionCall): Call {
   assert(!hasDynamicArguments(call), `asCall: cannot encode dynamic call: ${call} as static`)

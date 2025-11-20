@@ -1,4 +1,3 @@
-import assert from 'assert'
 
 import {
   concatHex,
@@ -8,6 +7,7 @@ import {
   parseAbi,
   PublicClient
 } from 'viem'
+import { assert } from '../sdk/index.js'
 
 /**
  * Helper to call a Solidity script encoded in a contract constructor.
@@ -35,7 +35,7 @@ export async function callSolidityScript (
   assert(contractMeta.bytecode, 'No bytecode found in contract metadata')
 
   const constructorAbi: { inputs: any[] } | undefined = contractMeta.abi.find((item: any) => item.type === 'constructor')
-  assert(constructorAbi, 'No constructor found in ABI')
+  assert(constructorAbi!=null, 'No constructor found in ABI')
 
   const encodedParams: Hex = encodeAbiParameters(constructorAbi.inputs, params)
   const { data } = await client.call({
