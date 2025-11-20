@@ -4,3 +4,4 @@ node_modules
 /packages/sdk/dist/
 /packages/accounts/dist/
 /yarn-error.log
+tsconfig.tsbuildinfo

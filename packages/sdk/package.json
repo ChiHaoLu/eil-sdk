@@ -2,7 +2,7 @@
   "name": "@eil-protocol/sdk",
   "type": "module",
   "scripts": {
-    "build": "tsgo",
+    "build": "npx tsgo",
     "clean": "rm -rf dist"
   },
   "version": "0.1.0",

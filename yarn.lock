@@ -782,12 +782,12 @@
   dependencies:
     undici-types "~6.19.2"
 
-"@types/node@^22.19.1":
-  version "22.19.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.19.1.tgz#1188f1ddc9f46b4cc3aec76749050b4e1f459b7b"
-  integrity sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ==
+"@types/node@^24.10.1":
+  version "24.10.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.10.1.tgz#91e92182c93db8bd6224fca031e2370cef9a8f01"
+  integrity sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==
   dependencies:
-    undici-types "~6.21.0"
+    undici-types "~7.16.0"
 
 "@typescript/native-preview-darwin-arm64@7.0.0-dev.20251117.1":
   version "7.0.0-dev.20251117.1"
@@ -1390,10 +1390,10 @@ undici-types@~6.19.2:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.19.8.tgz#35111c9d1437ab83a7cdc0abae2f26d88eda0a02"
   integrity sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==
 
-undici-types@~6.21.0:
-  version "6.21.0"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.21.0.tgz#691d00af3909be93a7faa13be61b3a5b50ef12cb"
-  integrity sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==
+undici-types@~7.16.0:
+  version "7.16.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.16.0.tgz#ffccdff36aea4884cbfce9a750a0580224f58a46"
+  integrity sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==
 
 undici@^5.25.4:
   version "5.29.0"
@@ -1412,21 +1412,7 @@ util-deprecate@^1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
-viem@^2.39.0:
-  version "2.39.0"
-  resolved "https://registry.yarnpkg.com/viem/-/viem-2.39.0.tgz#54942ca3810bc904e3bfe97837a4d160699ad902"
-  integrity sha512-rCN+IfnMESlrg/iPyyVL+M9NS/BHzyyNy72470tFmbTuscY3iPaZGMtJDcHKKV8TC6HV9DjWk0zWX6cpu0juyA==
-  dependencies:
-    "@noble/curves" "1.9.1"
-    "@noble/hashes" "1.8.0"
-    "@scure/bip32" "1.7.0"
-    "@scure/bip39" "1.6.0"
-    abitype "1.1.0"
-    isows "1.0.7"
-    ox "0.9.6"
-    ws "8.18.3"
-
-viem@^2.39.2:
+viem@^2.39.3:
   version "2.39.3"
   resolved "https://registry.yarnpkg.com/viem/-/viem-2.39.3.tgz#45884cc27d3faced1fc1d293fc2d9018b8b0789f"
   integrity sha512-s11rPQRvUEdc5qHK3xT4fIk4qvgPAaLwaTFq+EbFlcJJD+Xn3R4mc9H6B6fquEiHl/mdsdbG/uKCnYpoNtHNHw==
