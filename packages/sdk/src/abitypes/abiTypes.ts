@@ -1,5 +1,4 @@
-import EntryPointMeta
-  from '@account-abstraction/contracts/artifacts/EntryPoint.json' with { type: 'json' }
+import { entryPoint08Abi } from 'viem/account-abstraction'
 
 import CrossChainPaymasterMetadata
   from '@eil-protocol/contracts/artifacts/src/CrossChainPaymaster.sol/CrossChainPaymaster.json' with { type: 'json' }
@@ -17,8 +16,12 @@ import XlpSelectionHelper
   from '@eil-protocol/contracts/artifacts/src/common/utils/XlpSelectionHelper.sol/XlpSelectionHelper.json' with { type: 'json' }
 import CreateXMetadata
   from '@eil-protocol/contracts/artifacts/src/createx/CreateX.sol/CreateX.json' with { type: 'json' }
-import TestERC20Meta from
-    '@eil-protocol/contracts/artifacts/src/test/TestERC20.sol/TestERC20.json' with { type: 'json' }
+import TestERC20Meta
+  from '@eil-protocol/contracts/artifacts/src/test/TestERC20.sol/TestERC20.json' with { type: 'json' }
+
+const EntryPointMeta = {
+  abi: entryPoint08Abi
+}
 
 // global metadata. used for decoding errors.
 const allMetaData: any[] = [

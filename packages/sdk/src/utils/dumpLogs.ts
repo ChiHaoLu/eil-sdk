@@ -1,9 +1,9 @@
-import EntryPointMeta from "@account-abstraction/contracts/artifacts/EntryPoint.json" with { type: 'json' }
-import { parseEventLogs, PublicClient } from "viem";
+import { parseEventLogs, PublicClient } from 'viem'
 
 import ICrossChainPaymaster
-  from "@eil-protocol/contracts/artifacts/src/ICrossChainPaymaster.sol/ICrossChainPaymaster.json" with { type: 'json' }
-import TestERC20 from "@eil-protocol/contracts/artifacts/src/test/TestERC20.sol/TestERC20.json" with { type: 'json' }
+  from '@eil-protocol/contracts/artifacts/src/ICrossChainPaymaster.sol/ICrossChainPaymaster.json' with { type: 'json' }
+import TestERC20 from '@eil-protocol/contracts/artifacts/src/test/TestERC20.sol/TestERC20.json' with { type: 'json' }
+import { EntryPointMeta } from '../abitypes/abiTypes.js'
 
 export async function dumpLogs (client: PublicClient) {
 

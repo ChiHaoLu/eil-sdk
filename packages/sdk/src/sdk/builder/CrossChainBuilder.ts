@@ -10,7 +10,6 @@ import {
   stringToBytes
 } from 'viem'
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts'
-import IEntryPointInterface from '@account-abstraction/contracts/artifacts/IEntryPoint.json' with { type: 'json' }
 
 import { AtomicSwapFeeRule } from '../../contractTypes/AtomicSwapFeeRule.js'
 import { amountOrMinAmount, BatchBuilder } from './BatchBuilder.js'
@@ -32,12 +31,13 @@ import { CrossChainVoucherCoordinator } from './CrossChainVoucherCoordinator.js'
 import { IMultiChainSmartAccount } from '../account/index.js'
 import { _factorAmount, getSolventXlps, SolventXlpInfo, SolventXlpSorter } from '../../utils/getSolventXlps.js'
 import { defaultFeeConfig, defaultXlpSelectionConfig, FeeConfig, XlpSelectionConfig } from '../config/index.js'
+import { EntryPointMeta } from '../../abitypes/abiTypes.js'
 
 /**
  * Maximum number of XLPs to allow for a voucher.
  * We limit this to avoid excessive gas costs when creating the voucher request.
  */
-const I_ENTRY_POINT_ID = computeInterfaceId(IEntryPointInterface.abi as Abi)
+const I_ENTRY_POINT_ID = computeInterfaceId(EntryPointMeta.abi as Abi)
 
 /**
  * A Builder for a cross-chain session.

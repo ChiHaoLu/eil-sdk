@@ -1,11 +1,27 @@
 {
   "name": "@eil-protocol/sdk",
+  "version": "0.1.2",
   "type": "module",
+  "license": "MIT",
+  "main": "./dist/sdk/index.js",
+  "module": "./dist/sdk/index.js",
+  "types": "./dist/sdk/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/sdk/index.js",
+      "require": "./dist/sdk/index.js",
+      "types": "./dist/sdk/index.d.ts"
+    }
+  },
+  "dependencies": {
+    "@eil-protocol/contracts": "^0.1.0"
+  },
   "scripts": {
     "build": "npx tsgo",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepack": "yarn build"
   },
-  "version": "0.1.0",
-  "main": "./dist/sdk/index.js",
-  "license": "MIT"
+  "files": [
+    "dist"
+  ]
 }

@@ -1,13 +1,26 @@
 {
   "name": "@eil-protocol/accounts",
+  "version": "0.1.2",
   "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "npx tsgo",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepack": "yarn build"
   },
-  "version": "0.1.0",
-  "main": "./dist/index.js",
-  "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "permissionless": "^0.3.2"
   }
