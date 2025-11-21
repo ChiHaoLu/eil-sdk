@@ -199,6 +199,7 @@ export class BatchBuilder {
   async createUserOp (): Promise<UserOperation> {
     const chainId = this.chainId
 
+    const client = this.config.chains.clientOn(chainId) 
     const mcAccount = this.parentBuilder.getAccount()
     const smartAccount = mcAccount.contractOn(chainId)
     const allCalls = await Promise.all(this.actions.map((action) => {
@@ -219,7 +220,9 @@ export class BatchBuilder {
     ])
 
     const nonce1 = BigInt(nowSeconds()) << 64n
-    const { maxFeePerGas, maxPriorityFeePerGas } = await smartAccount.client.extend(publicActions).estimateFeesPerGas()
+
+    let { maxPriorityFeePerGas, maxFeePerGas } = await client.estimateFeesPerGas()
+    maxFeePerGas = maxFeePerGas * 2n // add margin
     let userOp = {
       chainId,
       sender,

@@ -199,10 +199,13 @@ export class CrossChainExecutor {
     this.watchForUserOperationEvents(batchStatusInfo, callback)
     this.builder.getAccount().sendUserOperation(userOp as UserOperation)
       .catch(e => {
-        console.error('Error executing UserOperation:', e)
+        console.error('Error executing UserOperation:', { e} )
         // Validation failure during sending.
         // This indicates a potential issue with the UserOperation.
         batchStatusInfo.status = OperationStatus.Failed
+        if ( e?.cause?.data?.originalError?.error?.message != null) {
+          e = e.cause.data.originalError.error.message
+        }
         batchStatusInfo.revertReason = e as any
         this.callCallback(CallbackType.Failed, callback, batchStatusInfo)
       })
